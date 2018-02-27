@@ -1,0 +1,8 @@
+<h1>All Post-Its</h1>
+<h3><%= link_to 'New Note', new_note_path %></h4>
+<% @notes.each do |note| %>
+  <h4><%= note.title %></h4>
+  <%= link_to 'Show', note_path(note) %>
+  <%= link_to 'Edit', edit_note_path(note) %>
+  <%= link_to 'Delete', note, method: :delete %>
+<% end %>
